@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    
+    font-family: 'Karla', Helvetica, sans-serif;
+    font-size: 1.15rem;
+    color: rgb(25, 25, 25);
+    line-height: 2rem;
+    background-color: rgb(42, 43, 42);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: fit-content;
+    height: fit-content;
+    /* width:20.3rem;
+    height:10.9rem; */
+
+    padding: 2rem;
+    background-color: rgb(183, 173, 153);
+}
+
+
+    /* h1, p {
+        padding: 2rem;
+        overflow: hidden;
+    } */
+
+    h1 {
+        display: inline-flex;
+        margin: 2rem;
+        width: fit-content;
+    }
+
+    .welcome-btn-con {
+        width: 4rem;
+        height: 1.9rem;
+        margin: .8rem;
+
+        background-color: rgb(255, 67, 101);
+
+        transform: skew(-20deg);
+        box-shadow: .3rem .3rem rgb(150, 3, 26);
+
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+
+    .welcome-btn {
+        text-transform: uppercase;
+        font-size: .7rem;
+        font-weight: 700;
+        color: rgb(183, 173, 153);
+        letter-spacing: .06rem;
+
+        width: fit-content;
+        position: absolute;
+        margin: .6rem .75rem;
+
+        background: none;
+        border: none;
+        transform: skew(20deg);
+
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+
+        .welcome-btn-con:hover {
+            box-shadow: none;
+        }
