@@ -1,8 +1,9 @@
 /**
- * Glöm inte att lägga till JSdoc
+ * Add JSDoc
  */
-$('.welcome-btn-con').click(function() {
-    $('.welcome-btn-con, .welcome-btn').animate({
-        "opacity" : "0"
-    }, 100);
+$('.welcome-btn-con, .welcome-btn').click(function() {
+    $('.welcome-btn-con, .welcome-btn').fadeOut
+    (300, function() 
+    { $(this).remove(); }
+    );
 });
