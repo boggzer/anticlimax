@@ -18,29 +18,42 @@ html, body {
     align-items: center;
 }
 
+/* .welcome-con {
+    transition: 2s ease-in-out all;
+} */
+
+.noshadow {
+    box-shadow: none;
+}
+
+.boxshadow {
+    box-shadow: .3rem .3rem rgb(150, 3, 26);
+}
+
+.trans-ease {
+    transition: .3s ease-in-out all;
+}
+
 .txt-area {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     width: fit-content;
     height: fit-content;
-    /* width:20.3rem;
-    height:10.9rem; */
 
     padding: 2rem;
-    background-color: rgb(183, 173, 153);
+    
+    background-color: rgb(146, 141, 132);
 }
 
-
-    /* h1, p {
-        padding: 2rem;
-        overflow: hidden;
-    } */
+.txt-area-big {
+    width: 28rem;
+    height: 20rem;
+    justify-content: space-between;
+}
 
     h1 {
-        display: inline-flex;
         margin: 2rem;
         width: fit-content;
     }
@@ -48,15 +61,12 @@ html, body {
     .welcome-btn-con {
         width: 4rem;
         height: 1.9rem;
-        margin: .8rem;
+        margin: 0 auto;
 
         background-color: rgb(255, 67, 101);
-
         transform: skew(-20deg);
-        box-shadow: .3rem .3rem rgb(150, 3, 26);
 
         cursor: pointer;
-        transition: .5s ease-in-out all;
     }
 
     .welcome-btn {
@@ -66,18 +76,40 @@ html, body {
         color: rgb(183, 173, 153);
         letter-spacing: .06rem;
 
+        
         width: fit-content;
         position: absolute;
         margin: .6rem .75rem;
-
+        
         background: none;
+        background-color: red;
         border: none;
         transform: skew(20deg);
 
         cursor: pointer;
-        transition: .5s ease-in-out all;
     }
 
-        .welcome-btn-con:hover {
+        /* .welcome-btn-con:hover {
             box-shadow: none;
+        } */
+    
+    .decision-con {
+        width: 28rem;
+        justify-content: space-around;
+    }
+
+        .decision-choice {
+            width: 10rem;
         }
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-none {
+    display: none;
+}
