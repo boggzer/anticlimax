@@ -19,7 +19,7 @@ html, body {
 }
 
 /* .welcome-con {
-    transition: 2s ease-in-out all;
+    ma: 2s ease-in-out all;
 } */
 
 .noshadow {
@@ -31,7 +31,7 @@ html, body {
 }
 
 .trans-ease {
-    transition: .3s ease-in-out all;
+    ma: .3s ease-in-out all;
 }
 
 .txt-area {
@@ -94,13 +94,10 @@ html, body {
         } */
     
     .decision-con {
+        margin-top: 3rem;
         width: 28rem;
         justify-content: space-around;
     }
-
-        .decision-choice {
-            width: 10rem;
-        }
 
 .display-inline-flex {
     display: inline-flex;
@@ -113,3 +110,12 @@ html, body {
 .display-none {
     display: none;
 }
+
+label {
+    margin: .5rem;
+}
+
+form {
+    justify-content: space-between;
+}
+

@@ -32,6 +32,28 @@ function revealContent() {
     let allDisplayNone = document.querySelectorAll('.display-none');
 
     $(allDisplayNone).delay(2500).fadeIn(300, function () {
-        $(this).classList.replace('display-none', 'display-flex');
+        $(allDisplayNone).add('display-flex');
     });
-};
+}
+
+let theForm = document.getElementsByTagName('form');
+let inputName = document.getElementsByName('choice');
+
+inputName.forEach(loopChoices);
+
+/**
+ * 
+ * @param {*} item 
+ * @param {*} index 
+ */
+function loopChoices(item, index) {
+    choiceVal = item.value;
+    index; // Används ej.
+
+    let itemId = item.id;
+    let newLabel = document.createElement('label');
+    newLabel.setAttribute('for', itemId);
+
+    newLabel.innerHTML += "" + choiceVal + "<br>";
+    item.after(newLabel);
+}
