@@ -8,6 +8,8 @@
 
     <!-- Stylesheets -->
     <link href="style.css" rel="stylesheet">
+    <link href="mediaqueries.css" rel="stylesheet">
+    <link href="shared-classes.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <!-- JS -->
     <script defer src="script.js"></script>
@@ -34,7 +36,7 @@
 
     <!-- Berättelse -->
     <div class="display-none txt-area">
-        <p class="display-none">Hrrrrnnggg... jjjjggm... ssss</p>
+        <p class="display-none p-txt">Hrrrrnnggg... jjjjggm... ssss</p>
 
         <!-- Val -->
         <div class="decision-con display-none">
@@ -44,11 +46,10 @@
                         <input type="radio" id="do-nothing" name="choice" value="Gör ingenting">
                     </div>
                     <div class="input-con">
-                        <input type="radio" id="run-away" name="choice" value="Spring därifrån" checked>
+                        <input type="radio" id="run-away" name="choice" value="Spring härifrån">
                     </div>
-                
-                
-
+                    <input onclick="return radioValidation()" onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn" name="next-page" value=">">
+            
             </form>
         </div>
     </div>

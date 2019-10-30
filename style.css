@@ -4,7 +4,7 @@
 }
 
 html, body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     
     font-family: 'Karla', Helvetica, sans-serif;
@@ -16,22 +16,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* .welcome-con {
-    ma: 2s ease-in-out all;
-} */
-
-.noshadow {
-    box-shadow: none;
-}
-
-.boxshadow {
-    box-shadow: .3rem .3rem rgb(150, 3, 26);
-}
-
-.trans-ease {
-    ma: .3s ease-in-out all;
 }
 
 .txt-area {
@@ -82,40 +66,46 @@ html, body {
         margin: .6rem .75rem;
         
         background: none;
-        background-color: red;
         border: none;
         transform: skew(20deg);
 
         cursor: pointer;
     }
 
-        /* .welcome-btn-con:hover {
-            box-shadow: none;
-        } */
-    
     .decision-con {
         margin-top: 3rem;
         width: 28rem;
         justify-content: space-around;
     }
 
-.display-inline-flex {
-    display: inline-flex;
-}
 
-.display-flex {
-    display: flex;
-}
-
-.display-none {
-    display: none;
+form {
+    height: fit-content;
+    justify-content: space-between;
 }
 
 label {
     margin: .5rem;
+    font-size: .9rem;
 }
 
-form {
-    justify-content: space-between;
+input[type=submit] {
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    background: rgb(255, 67, 101);
+    border-radius: 50% 50% 50% 50%;
+    color: rgb(183, 173, 153);
+
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    
+    display: block;
+    cursor: pointer;
 }
 
+p {
+    display: flex;
+    flex-direction: column;
+}
