@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <!-- JS -->
     <script defer src="script.js"></script>
+    <script defer src="story.js"></script>
+    <!-- <script defer src="story.js"></script> -->
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -23,36 +25,97 @@
 </head>
 
 <body>
-
     <!-- Allt inom box -->
 
     <!-- Förstasida -->
     <div class="welcome-con txt-area display-flex">
+
         <h1 class="display-inline-flex">Välkommen.</h1>
+
         <div class="welcome-btn-con boxshadow trans-ease display-flex">
             <button class="welcome-btn">Start</button>
         </div>
+
     </div>
 
     <!-- Berättelse -->
-    <div class="display-none txt-area">
-        <p class="display-none p-txt">Hrrrrnnggg... jjjjggm... ssss</p>
 
-        <!-- Val -->
-        <div class="decision-con display-none">
-            <form name="form-one" class="display-flex">
-
-                    <div class="input-con">
-                        <input type="radio" id="do-nothing" name="choice" value="Gör ingenting">
-                    </div>
-                    <div class="input-con">
-                        <input type="radio" id="run-away" name="choice" value="Spring härifrån">
-                    </div>
-                    <input onclick="return radioValidation()" onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn" name="next-page" value=">">
-            
-            </form>
-        </div>
+    <!-- Vägval 1 -->
+    <div class="path-one txt-area-big">
+        <p class="question-one">Hrrrrnnggg... jjjjggm... ssss</p>
+        <p class="question-one-dead">Du står kvar på samma plats. Arnold Schwarzenegger kommer fram bakom hörnet och
+            han har fått kortslutning! Han muttrar något på tyska och dödar dig.</p>
     </div>
+
+    <!-- Vägval 2 -->
+    <div class="path-two txt-area-big">
+        <p class="question-two">Rädd för det underliga ljudet, springer du långt bort. Du stannar och hämtar andan
+            och hör...</p>
+        <p class="question-two-dead-one">Du fokuserar och hör fortfarande samma ljud - Arnold Schwarzenegger har
+            följt efter dig! Han tar fram något Terminator-vapen typ och dödar dig.</p>
+        <p class="question-two-dead-two">Instinktivt följer du det jamande ljudet och möter en söt liten katt! Du
+            sträcker fram handen för att klappa men katten fräser till och klöser ut dina ögon.<br>Du förblöder och
+            dör.
+        </p>
+    </div>
+
+    <!-- Vägval 3 -->
+    <div class="path-three txt-area-big">
+        <p class="question-three">'Äsch, hur farligt kan det vara,' säger du för dig själv, samlar mod och
+            fortsätter gå i riktning mot det nya ljudet istället.<br>
+            Ljudet verkar komma från en stängd IKEA-flyttkartong. Den ser rätt så sliten ut.</p>
+        <p class="question-three-dead">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram 
+            handen för att klappa men katten hinner klösa ut dina ögon. Du förblöder och dör.</p>
+        <p class="finish">Slut</p>
+    </div>
+    </div>
+
+    <!-- Val -->
+    <form>
+        <div class="path-one choices-one txt-area-big">
+            <div class="choice-one-one">
+                <input type="radio" id="do-nothing" name="choice" value="Gör ingenting">
+                <label id="label-do-nothing" for="do-nothing">Gör ingenting</label>
+            </div>
+            <div class="choice-one-two">
+                <input type="radio" id="run-away" name="choice" value="Spring därifrån">
+                <label id="label-run-away" for="run-away">Spring därifrån</label>
+            </div>
+        </div>
+
+        <div class="path-two choices-two txt-area-big">
+            <div class="choice-two-one">
+                <input type="radio" id="same-noise" name="choice" value="Samma underliga ljud">
+                <label id="label-same-noise" for="same-noise">Samma underliga ljud</label>
+            </div>
+            <div class="choice-two-two">
+                <input type="radio" id="scratchy-noise" name="choice" value="Skrapande ljud">
+                <label id="label-scratchy-noise" for="scratchy-noise">Skrapande ljud</label>
+            </div>
+            <div class="choice-two-three">
+                <input type="radio" id="meow-noise" name="choice" value="Jamande">
+                <label id="label-meow-noise" for="meow-noise">Jamande</label>
+            </div>
+        </div>
+
+        <div class="path-three choices-three">
+            <div class="choice-two-two">
+                <input type="radio" id="open-box" name="choice" value="Öppna lådan">
+                <label id="label-open-box" for="open-box">Öppna lådan</label>
+            </div>
+            <div class="choice-two-two">
+                <input type="radio" id="casual" name="choice"
+                    value="Hallå där! Slut med detektivarbetet, din fikarast är över!">
+                <label id="label-casual" for="casual">'Hallå där!', ropar din chef. 'Slut med dagdrömmandet, 
+                    din fikarast är över!'</label>
+            </div>
+        </div>
+        <div class="txt-area-big">
+
+            <input onclick="return radioValidation()" onsubmit="return false" type="submit"
+                class="boxshadow trans-ease submit-btn" name="next-page" value=">">
+        </div>
+    </form>
 
 </body>
 

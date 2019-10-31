@@ -16,9 +16,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.txt-area {
+.txt-area, .txt-area-big {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -33,7 +35,6 @@ html, body {
 
 .txt-area-big {
     width: 28rem;
-    height: 20rem;
     justify-content: space-between;
 }
 
@@ -100,12 +101,26 @@ input[type=submit] {
     height: 2rem;
     width: 2rem;
     position: relative;
+    align-self: center;
+    margin-bottom: 2rem;
     
-    display: block;
+    display: none;
     cursor: pointer;
 }
 
 p {
+    margin-top: 1rem;
+    max-width: 28rem;
+    flex-direction: column;
+}
+
+.path-one, 
+.path-two, 
+.path-three {
+    display: none;
+}
+
+form {
     display: flex;
     flex-direction: column;
 }
