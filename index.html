@@ -6,121 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Stylesheets -->
-    <link href="style.css" rel="stylesheet">
-    <link href="mediaqueries.css" rel="stylesheet">
-    <link href="shared-classes.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-    <!-- JS -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
-    <script defer src="story.js"></script>
-    <!-- <script defer src="story.js"></script> -->
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
-    <!-- Add favicon -->
-
-    <title>Loading...</title>
+    <title>Experiment</title>
 </head>
 
 <body>
-    <!-- Allt inom box -->
-
-    <!-- Förstasida -->
-    <div class="welcome-con txt-area display-flex">
-
-        <h1 class="display-inline-flex">Välkommen.</h1>
-
-        <div class="welcome-btn-con boxshadow trans-ease display-flex">
-            <button class="welcome-btn">&nbsp;&nbsp;Start</button>
+    <div class="startsida">
+        <h1>Heading</h1>
+    </div>
+    <div class="allting display-none">
+        <div class="sida-ett">
+            <p class="choice-one">
+                Vägval ett?
+            </p>
+            <p class="sida-ett-slut display-none">
+                Du dog.
+            </p>
+            <form class="form-one">
+                <input type="radio" id="val-ett" name="choice" value="Val ett">
+                <label for="val-ett">Val ett</label>
+                <input type="radio" id="val-tva" name="choice" value="Val två">
+                <label for="val-tva">Val två</label>
+                <input onsubmit="return false" type="submit" name="end" value="Nästa">
+            </form>
         </div>
 
-    </div>
-
-    <!-- Berättelse -->
-
-    <!-- Vägval 1 -->
-    <div class="path-one txt-area-big">
-        <p class="question-one">Hrrrrnnggg... jjjjggm... ssss</p>
-        <p class="question-one-dead display-none">Du är... förvirrad. Ljudet kommer från under marken du står på - en fallucka
-            öppnas.
-            Du faller ner och dör.
-        </p>
-    </div>
-
-    <!-- Vägval 2 -->
-    <div class="path-two txt-area-big">
-        <p class="question-two display-none">Rädd för det underliga ljudet, springer du långt bort. Du stannar och hämtar andan
-            och hör...</p>
-        <p class="question-two-dead-one display-none">Du fokuserar och hör fortfarande samma ljud - en fallucka öppnas under dig.
-            Det var ju inte så smart att stanna på samma ställe...</p>
-        <p class="question-two-dead-two display-none">Instinktivt följer du det jamande ljudet och möter en söt liten katt! Du
-            sträcker fram handen för att klappa men katten fräser till och klöser ut dina ögon.<br>Du förblöder och
-            dör.
-        </p>
-    </div>
-
-    <!-- Vägval 3 -->
-    <div class="path-three txt-area-big">
-        <p class="question-three display-none">'Äsch, hur farligt kan det vara,' säger du för dig själv, samlar mod och
-            fortsätter gå i riktning mot det nya ljudet istället.<br>
-            Ljudet verkar komma från en stängd IKEA-flyttkartong. Den ser rätt så sliten ut.</p>
-        <p class="question-three-dead display-none">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram
-            handen för att klappa men katten hinner klösa ut dina ögon. Du förblöder och dör.</p>
-        <p class="finish display-none">Slut</p>
-    </div>
-    </div>
-
-    <!-- Val -->
-    <form>
-        <div class="path-one choices-one txt-area-big">
-            <div class="choice-one-one">
-                <input type="radio" id="do-nothing" name="choice" value="Gör ingenting">
-                <label id="label-do-nothing" for="do-nothing">Gör ingenting</label>
-            </div>
-            <div class="choice-one-two">
-                <input type="radio" id="run-away" name="choice" value="Spring därifrån">
-                <label id="label-run-away" for="run-away">Spring därifrån</label>
-            </div>
+        <div class="sida-tva display-none">
+            <p class="choice-two">
+                Vägval två?
+            </p>
+            <p class="sida-tva-slut display-none">
+                Du dog.
+            </p>
+            <form class="form-two">
+                <input type="radio" id="val-tre" name="choice" value="Val tre">
+                <label for="val-tre">Val tre</label>
+                <input type="radio" id="val-fyra" name="choice" value="Val fyra">
+                <label for="val-fyra">Val fyra</label>
+                <input onsubmit="return false" type="submit" name="next" value="Nästa">
+            </form>
         </div>
 
-        <div class="path-two choices-two txt-area-big display-none">
-            <div class="choice-two-one">
-                <input type="radio" id="same-noise" name="choice" value="Samma underliga ljud">
-                <label id="label-same-noise" for="same-noise">Samma underliga ljud</label>
-            </div>
-            <div class="choice-two-two">
-                <input type="radio" id="scratchy-noise" name="choice" value="Skrapande ljud">
-                <label id="label-scratchy-noise" for="scratchy-noise">Skrapande ljud</label>
-            </div>
-            <div class="choice-two-three">
-                <input type="radio" id="meow-noise" name="choice" value="Jamande">
-                <label id="label-meow-noise" for="meow-noise">Jamande</label>
-            </div>
+        <div class="sida-tre display-none">
+            <p class="choice-three">
+                Vägval tre?
+            </p>
+            <p class="sida-tre-slut display-none">
+                Du dog.
+            </p>
+            <p class="slut display-none">
+                Slut.
+            </p>
+            <form class="form-three">
+                <input type="radio" id="val-fem" name="choice" value="Val fem">
+                <label for="val-fem">Val fem</label>
+                <input type="radio" id="val-sex" name="choice" value="Val sex">
+                <label for="val-sex">Val sex</label>
+                <input onsubmit="return false" type="submit" name="next" value="Nästa">
+                <input class="end display-none" onsubmit="return false" type="button" name="end" value="Slut">
+            </form>
         </div>
+        <input class="restart display-none" onsubmit="return" type="submit" value="Börja om">
 
-        <div class="path-three choices-three">
-            <div class="choice-two-two display-none">
-                <input type="radio" id="open-box" name="choice" value="Öppna lådan">
-                <label id="label-open-box" for="open-box">Öppna lådan</label>
-            </div>
-            <div class="choice-two-two display-none">
-                <input type="radio" id="casual" name="choice"
-                    value="Hallå där! Slut med detektivarbetet, din fikarast är över!">
-                <label id="label-casual" for="casual">'Hallå där!', ropar din chef. 'Slut med dagdrömmandet,
-                    din fikarast är över!'</label>
-            </div>
-        </div>
-        <div class="txt-area-big">
-            <div class="restart-btn-con boxshadow-two display-none trans-ease-two">
-                <button class="restart-btn trans-ease-two" value="Restart" name="refresh-page" onClick="window.location.href=window.location.href">Restart</button>
-            </div>
-            <input onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn display-none" name="next-page"
-                value=">">
-        </div>
-    </form>
-
+    </div>
 </body>
 
 </html>

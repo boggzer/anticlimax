@@ -1,61 +1,137 @@
-/**
- * Add JSDoc
- * .welcome-btn-con, .welcome-btn fadeOut and remove on click function
- */
-let parentPathOne = document.querySelector('.path-one');
-$(parentPathOne).hide();
+$(document).ready(function doThis() {
+   $('.startsida').delay(2500).fadeOut('slow')
 
-$('.boxshadow-two').hover(function () {
-
-    $(this).removeClass('boxshadow-two');
-}, function () {
-    $(this).addClass('boxshadow-two');
-}
-);
-
-$('.boxshadow').hover(function () {
-
-    $(this).removeClass('boxshadow');
-}, function () {
-    $(this).addClass('boxshadow');
-}
-);
-
-$('.welcome-btn-con, .welcome-btn').click(function () {
-
-    $('.welcome-btn-con').removeClass('trans-ease');
-    $('.welcome-btn-con').delay(500).fadeTo('slow', 0);
-
-    return fadeWelcome();
+   return revealFirstPage();
 });
 
-$('.restart-btn')
+function revealFirstPage() {
+   $('.allting').delay(3400).fadeIn('slow', function () {
+       $(this).removeClass('display-none');
+   })
+};
 
-/**
- * 
- */
-function fadeWelcome() {
+let submitBtn = $('input[type="submit"]');
 
-    $('.welcome-con').delay(1400).fadeOut();
-
-    return revealPathOne();
-
-}
-
-
-let deadPathOne = document.querySelector('.question-one-dead');
-let submitBtn = document.querySelector('.submit-btn');
-/**
- * 
- */
-function revealPathOne() {
-
-    $('.submit-btn').delay(2500).fadeTo('slow', 1);
-    $(parentPathOne).delay(2500).show();
-
-}
-
-$(submitBtn).click(function () {
-    validatePathOne();
-    return false;
+submitBtn.click(function () {
+   return radioValidation();
 });
+
+let formOne = document.getElementsByClassName('form-one');
+let formTwo = document.getElementsByClassName('form-two');
+let formThree = document.getElementsByClassName('form-three');
+let userChoice;
+let checked = false;
+
+function radioValidation() {
+
+   let radioChoices = $("input[name='choice']");
+
+   for (let i = 0; i < radioChoices.length; i++) {
+       if (radioChoices[i].checked) {
+           userChoice = radioChoices[i].value;
+           checked = true;
+       }
+   }
+
+   if (!checked) {
+       alert('Välj för att gå vidare');
+       return false;
+   }
+
+   if (userChoice === "Val ett") {
+       let underThis = $('p.choice-one');
+       youChose(userChoice, underThis);
+
+       $('.sida-ett-slut').delay(300).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       })
+       $(formOne).remove();
+
+       return restart();
+   }
+
+   if (userChoice === "Val två") {
+       let underThis = $('p.choice-one');
+       youChose(userChoice, underThis);
+
+       $(formOne).remove();
+
+       $('.sida-tva').delay(100).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       });
+
+       return false;
+   }
+
+   if (userChoice === "Val tre") {
+       let underThis = $('p.choice-two');
+       youChose(userChoice, underThis);
+
+       $(formTwo).remove();
+
+       $('.sida-tva-slut').delay(300).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       })
+
+       return restart();
+   }
+
+   if (userChoice === "Val fyra") {
+       let underThis = $('p.choice-two');
+       youChose(userChoice, underThis);
+
+       $(formTwo).remove();
+
+       $('.sida-tre').delay(300).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       })
+
+       return false;
+   }
+
+   if (userChoice === "Val fem") {
+       let underThis = $('p.choice-three');
+       youChose(userChoice, underThis);
+
+       $(formThree).remove();
+       
+       $('.sida-tre-slut').delay(300).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       })
+
+       return restart();
+   }
+
+   else if (userChoice === "Val sex") {
+       let underThis = $('p.choice-three');
+       youChose(userChoice, underThis);
+       
+       $('.slut').delay(300).fadeIn('slow', function () {
+           $(this).removeClass('display-none');
+       })
+       
+       $(formThree).remove();
+
+       return restart();
+   }
+}
+
+let allP = document.querySelectorAll('p');
+console.log(allP, allP.length);
+
+function youChose(theChoice, oldText) {
+   let newText = document.createElement('p');
+   newText.appendChild(document.createTextNode(theChoice));
+   // let oldText = document.querySelector('p');
+   oldText.append(newText);
+}
+
+function restart() {
+   $('.restart').delay(300).fadeIn('slow', function () {
+       $(this).removeClass('display-none');
+       $('.restart').click(function () {
+           window.location.reload();
+       });
+   });
+
+}

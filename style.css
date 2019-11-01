@@ -1,128 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
 }
 
 html, body {
+    padding: 0;
+    margin: 0;
     width: 100vw;
     height: 100vh;
-    
-    font-family: 'Karla', Helvetica, sans-serif;
-    font-size: 1.15rem;
-    color: rgb(25, 25, 25);
-    line-height: 2rem;
-    background-color: rgb(42, 43, 42);
-
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.txt-area, .txt-area-big {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
-
-    padding: 1rem 2rem;
-    
-    background-color: rgb(146, 141, 132);
+.sida-ett > p:last-child {
+    background: red;
 }
 
-.txt-area-big {
+h1 {
+    background: paleturquoise;
+    padding: 1rem;
+}
+.allting {
     width: 28rem;
-    justify-content: space-between;
-}
-
-    h1 {
-        margin: 2rem;
-        width: fit-content;
-    }
-
-    .welcome-btn-con, .restart-btn-con {
-        width: 5rem;
-        height: 1.9rem;
-        margin: 0 auto;
-
-        background-color: rgb(255, 67, 101);
-        transform: skew(-20deg);
-
-        cursor: pointer;
-    }
-
-    .welcome-btn, .restart-btn {
-        text-transform: uppercase;
-        font-size: .7rem;
-        font-weight: 700;
-        color: rgb(183, 173, 153);
-        letter-spacing: .06rem;
-
-        
-        width: fit-content;
-        position: absolute;
-        margin: .6rem .75rem;
-        
-        background: none;
-        border: none;
-        transform: skew(20deg);
-
-        cursor: pointer;
-    }
-
-    .decision-con {
-        margin-top: 3rem;
-        width: 28rem;
-        justify-content: space-around;
-    }
-
-
-form {
-    height: fit-content;
-    justify-content: space-between;
-}
-
-label {
-    margin: .5rem;
-    font-size: .9rem;
-}
-
-input[type=submit] {
-    font-weight: 700;
-    font-size: 1rem;
-    border: none;
-    background: rgb(255, 67, 101);
-    border-radius: 50% 50% 50% 50%;
-    color: rgb(183, 173, 153);
-
-    height: 2rem;
-    width: 2rem;
-    position: relative;
-    align-self: center;
-    margin-bottom: 1rem;
-    
-
-    cursor: pointer;
-}
-
-p {
-    margin-top: .3rem;
-    max-width: 28rem;
-    flex-direction: column;
-}
-
-.path-one, 
-.path-two, 
-.path-three {
-    display: none;
-    
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: palevioletred;
 }
