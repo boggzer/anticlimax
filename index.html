@@ -33,7 +33,7 @@
         <h1 class="display-inline-flex">Välkommen.</h1>
 
         <div class="welcome-btn-con boxshadow trans-ease display-flex">
-            <button class="welcome-btn">Start</button>
+            <button class="welcome-btn">&nbsp;&nbsp;Start</button>
         </div>
 
     </div>
@@ -43,16 +43,18 @@
     <!-- Vägval 1 -->
     <div class="path-one txt-area-big">
         <p class="question-one">Hrrrrnnggg... jjjjggm... ssss</p>
-        <p class="question-one-dead">Du står kvar på samma plats. Arnold Schwarzenegger kommer fram bakom hörnet och
-            han har fått kortslutning! Han muttrar något på tyska och dödar dig.</p>
+        <p class="question-one-dead">Du är... förvirrad. Ljudet kommer från under marken du står på - en fallucka
+            öppnas.
+            Du faller ner och dör.
+        </p>
     </div>
 
     <!-- Vägval 2 -->
     <div class="path-two txt-area-big">
         <p class="question-two">Rädd för det underliga ljudet, springer du långt bort. Du stannar och hämtar andan
             och hör...</p>
-        <p class="question-two-dead-one">Du fokuserar och hör fortfarande samma ljud - Arnold Schwarzenegger har
-            följt efter dig! Han tar fram något Terminator-vapen typ och dödar dig.</p>
+        <p class="question-two-dead-one">Du fokuserar och hör fortfarande samma ljud - en fallucka öppnas under dig.
+            Det var ju inte så smart att stanna på samma ställe...</p>
         <p class="question-two-dead-two">Instinktivt följer du det jamande ljudet och möter en söt liten katt! Du
             sträcker fram handen för att klappa men katten fräser till och klöser ut dina ögon.<br>Du förblöder och
             dör.
@@ -64,7 +66,7 @@
         <p class="question-three">'Äsch, hur farligt kan det vara,' säger du för dig själv, samlar mod och
             fortsätter gå i riktning mot det nya ljudet istället.<br>
             Ljudet verkar komma från en stängd IKEA-flyttkartong. Den ser rätt så sliten ut.</p>
-        <p class="question-three-dead">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram 
+        <p class="question-three-dead">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram
             handen för att klappa men katten hinner klösa ut dina ögon. Du förblöder och dör.</p>
         <p class="finish">Slut</p>
     </div>
@@ -106,14 +108,16 @@
             <div class="choice-two-two">
                 <input type="radio" id="casual" name="choice"
                     value="Hallå där! Slut med detektivarbetet, din fikarast är över!">
-                <label id="label-casual" for="casual">'Hallå där!', ropar din chef. 'Slut med dagdrömmandet, 
+                <label id="label-casual" for="casual">'Hallå där!', ropar din chef. 'Slut med dagdrömmandet,
                     din fikarast är över!'</label>
             </div>
         </div>
         <div class="txt-area-big">
-
-            <input onclick="return radioValidation()" onsubmit="return false" type="submit"
-                class="boxshadow trans-ease submit-btn" name="next-page" value=">">
+            <div class="restart-btn-con boxshadow display-none trans-ease">
+                <button class="restart-btn" value="Restart" name="refresh-page" onClick="window.location.href=window.location.href">Restart</button>
+            </div>
+            <input onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn" name="next-page"
+                value=">">
         </div>
     </form>
 

@@ -43,8 +43,8 @@ html, body {
         width: fit-content;
     }
 
-    .welcome-btn-con {
-        width: 4rem;
+    .welcome-btn-con, .restart-btn-con {
+        width: 5rem;
         height: 1.9rem;
         margin: 0 auto;
 
@@ -54,7 +54,7 @@ html, body {
         cursor: pointer;
     }
 
-    .welcome-btn {
+    .welcome-btn, .restart-btn {
         text-transform: uppercase;
         font-size: .7rem;
         font-weight: 700;
