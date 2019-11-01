@@ -27,8 +27,9 @@ html, body {
 
     width: fit-content;
     height: fit-content;
+    overflow: hidden;
 
-    padding: 2rem;
+    padding: 1rem 2rem;
     
     background-color: rgb(146, 141, 132);
 }
@@ -102,14 +103,14 @@ input[type=submit] {
     width: 2rem;
     position: relative;
     align-self: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     
-    display: none;
+
     cursor: pointer;
 }
 
 p {
-    margin-top: 1rem;
+    margin-top: .3rem;
     max-width: 28rem;
     flex-direction: column;
 }
@@ -118,6 +119,7 @@ p {
 .path-two, 
 .path-three {
     display: none;
+    
 }
 
 form {

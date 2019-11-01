@@ -1,36 +1,40 @@
 let userChoices;
 let checked = false;
 let radioChoices = $("input[name='choice']");
-let choicesOne = document.querySelector('.choices-one');
+
 let parentPathTwo = document.querySelectorAll('.path-two');
 let parentPathThree = document.querySelectorAll('.path-three');
+
+let choicesOne = document.querySelector('.choices-one');
 let choicesTwo = document.querySelector('.choices-two');
+let choicesThree = document.querySelector('.choices-three');
+
 let deadPathTwoOne = document.querySelector('.question-two-dead-one');
+let deadPathTwoTwo = document.querySelector('.question-two-dead-two');
+let deadPathThree = document.querySelector('.question-three-dead');
+
 let restartBtn = document.querySelectorAll('.restart-btn-con, .restart-btn');
+
 /**
- * 
+ *
  */
 function notChecked() {
     alert('Hoppsan! Välj något av alternativen för att gå vidare.');
     return false;
 }
 
-function restartNow() {
-    $('.restart-btn-con, .restart-btn').show();
-}
-
 /**
  * 
  */
 function validatePathOne() {
-
+    $(choicesOne).remove();
+    userChoices = null;
     // Loopa genom vägval
     for (i = 0; i < radioChoices.length; i++) {
         if (radioChoices[i].checked) {
             checked = true;
             userChoices = radioChoices[i].value;
 
-            $(choicesOne).hide();
         }
     }
 
@@ -44,8 +48,8 @@ function validatePathOne() {
     // Vägval 1 -- Val 1
     if (userChoices === "Gör ingenting") {
         youChose(userChoices);
-        
-        $(choicesOne).hide();
+        $(submitBtn).hide();
+
         $(deadPathOne).show();
 
         $(restartBtn).show();
@@ -60,16 +64,17 @@ function validatePathOne() {
     else if (userChoices === "Spring därifrån") {
         youChose(userChoices);
 
-        $(parentPathTwo).show();
-        
+        $('.path-two').removeClass('display-none');
+        parentPathOne.style.cssText = "display: flex";
+
         $('.question-two-dead-one, .question-two-dead-two').hide();
 
         // Ersätt funktion för submitknapp vid klick
         $(submitBtn).click(function () {
             validatePathTwo();
             return false;
-
         });
+
         return false;
     }
     return false;
@@ -84,12 +89,13 @@ function validatePathTwo() {
         if (radioChoices[i].checked) {
             checked = true;
             userChoices = radioChoices[i].value;
+
+            $(choicesTwo).hide();
         }
     }
 
     if (!checked) {
         notChecked();
-
         return false;
     }
 
@@ -97,18 +103,23 @@ function validatePathTwo() {
     if (userChoices === "Samma underliga ljud") {
         youChose(userChoices);
 
-        $(parentPathTwo).hide();
-        $(deadPathTwoOne).show();
+        let hideThese
 
-        return false;
+        $(deadPathTwoOne).show();
+        $(restartBtn).show();
+
+        $(restartBtn).show();
+        $(restartBtn).click(function () {
+            window.location.reload(true);
+            return false;
+        });
     }
+
     // Vägval 2 -- Val 2
     if (userChoices === "Skrapande ljud") {
         youChose(userChoices);
 
         $(parentPathTwo).hide();
-        $(dead)
-
         $(choicesTwo).hide();
         $('.question-two-dead').hide();
 
@@ -117,9 +128,20 @@ function validatePathTwo() {
             return false;
         });
     }
+
     // Vägval 2 -- Val 3
     else if (userChoices === "Jamande") {
         youChose(userChoices);
+
+        $(parentPathTwo).hide();
+        $(deadPathTwoTwo).show();
+        $(choicesThree).hide();
+        $(submitBtn).hide();
+
+        $(restartBtn).show();
+        $(restartBtn).click(function () {
+            window.location.reload(true);
+        });
         return false;
     }
     return false;

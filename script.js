@@ -2,9 +2,18 @@
  * Add JSDoc
  * .welcome-btn-con, .welcome-btn fadeOut and remove on click function
  */
+let parentPathOne = document.querySelector('.path-one');
+$(parentPathOne).hide();
 
+$('.boxshadow-two').hover(function () {
 
-$(document.querySelectorAll('.boxshadow')).hover(function () {
+    $(this).removeClass('boxshadow-two');
+}, function () {
+    $(this).addClass('boxshadow-two');
+}
+);
+
+$('.boxshadow').hover(function () {
 
     $(this).removeClass('boxshadow');
 }, function () {
@@ -20,6 +29,8 @@ $('.welcome-btn-con, .welcome-btn').click(function () {
     return fadeWelcome();
 });
 
+$('.restart-btn')
+
 /**
  * 
  */
@@ -31,19 +42,18 @@ function fadeWelcome() {
 
 }
 
-let parentPathOne = document.querySelectorAll('.path-one, .submit-btn');
+
 let deadPathOne = document.querySelector('.question-one-dead');
+let submitBtn = document.querySelector('.submit-btn');
 /**
  * 
  */
 function revealPathOne() {
 
-    $(parentPathOne).delay(2500).fadeIn(300);
-    $(deadPathOne).hide();
+    $('.submit-btn').delay(2500).fadeTo('slow', 1);
+    $(parentPathOne).delay(2500).show();
 
 }
-
-let submitBtn = document.querySelector('.submit-btn');
 
 $(submitBtn).click(function () {
     validatePathOne();

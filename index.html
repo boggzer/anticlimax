@@ -43,7 +43,7 @@
     <!-- Vägval 1 -->
     <div class="path-one txt-area-big">
         <p class="question-one">Hrrrrnnggg... jjjjggm... ssss</p>
-        <p class="question-one-dead">Du är... förvirrad. Ljudet kommer från under marken du står på - en fallucka
+        <p class="question-one-dead display-none">Du är... förvirrad. Ljudet kommer från under marken du står på - en fallucka
             öppnas.
             Du faller ner och dör.
         </p>
@@ -51,11 +51,11 @@
 
     <!-- Vägval 2 -->
     <div class="path-two txt-area-big">
-        <p class="question-two">Rädd för det underliga ljudet, springer du långt bort. Du stannar och hämtar andan
+        <p class="question-two display-none">Rädd för det underliga ljudet, springer du långt bort. Du stannar och hämtar andan
             och hör...</p>
-        <p class="question-two-dead-one">Du fokuserar och hör fortfarande samma ljud - en fallucka öppnas under dig.
+        <p class="question-two-dead-one display-none">Du fokuserar och hör fortfarande samma ljud - en fallucka öppnas under dig.
             Det var ju inte så smart att stanna på samma ställe...</p>
-        <p class="question-two-dead-two">Instinktivt följer du det jamande ljudet och möter en söt liten katt! Du
+        <p class="question-two-dead-two display-none">Instinktivt följer du det jamande ljudet och möter en söt liten katt! Du
             sträcker fram handen för att klappa men katten fräser till och klöser ut dina ögon.<br>Du förblöder och
             dör.
         </p>
@@ -63,12 +63,12 @@
 
     <!-- Vägval 3 -->
     <div class="path-three txt-area-big">
-        <p class="question-three">'Äsch, hur farligt kan det vara,' säger du för dig själv, samlar mod och
+        <p class="question-three display-none">'Äsch, hur farligt kan det vara,' säger du för dig själv, samlar mod och
             fortsätter gå i riktning mot det nya ljudet istället.<br>
             Ljudet verkar komma från en stängd IKEA-flyttkartong. Den ser rätt så sliten ut.</p>
-        <p class="question-three-dead">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram
+        <p class="question-three-dead display-none">Du öppnar lådan som har en liten, söt katt inuti. Du sträcker instinktivt fram
             handen för att klappa men katten hinner klösa ut dina ögon. Du förblöder och dör.</p>
-        <p class="finish">Slut</p>
+        <p class="finish display-none">Slut</p>
     </div>
     </div>
 
@@ -85,7 +85,7 @@
             </div>
         </div>
 
-        <div class="path-two choices-two txt-area-big">
+        <div class="path-two choices-two txt-area-big display-none">
             <div class="choice-two-one">
                 <input type="radio" id="same-noise" name="choice" value="Samma underliga ljud">
                 <label id="label-same-noise" for="same-noise">Samma underliga ljud</label>
@@ -101,11 +101,11 @@
         </div>
 
         <div class="path-three choices-three">
-            <div class="choice-two-two">
+            <div class="choice-two-two display-none">
                 <input type="radio" id="open-box" name="choice" value="Öppna lådan">
                 <label id="label-open-box" for="open-box">Öppna lådan</label>
             </div>
-            <div class="choice-two-two">
+            <div class="choice-two-two display-none">
                 <input type="radio" id="casual" name="choice"
                     value="Hallå där! Slut med detektivarbetet, din fikarast är över!">
                 <label id="label-casual" for="casual">'Hallå där!', ropar din chef. 'Slut med dagdrömmandet,
@@ -113,10 +113,10 @@
             </div>
         </div>
         <div class="txt-area-big">
-            <div class="restart-btn-con boxshadow display-none trans-ease">
-                <button class="restart-btn" value="Restart" name="refresh-page" onClick="window.location.href=window.location.href">Restart</button>
+            <div class="restart-btn-con boxshadow-two display-none trans-ease-two">
+                <button class="restart-btn trans-ease-two" value="Restart" name="refresh-page" onClick="window.location.href=window.location.href">Restart</button>
             </div>
-            <input onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn" name="next-page"
+            <input onsubmit="return false" type="submit" class="boxshadow trans-ease submit-btn display-none" name="next-page"
                 value=">">
         </div>
     </form>
