@@ -1,0 +1,13 @@
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.italic {
+    font-style: italic;
+    padding-bottom: .5rem;
+    color: rgb(166, 52, 70);
+}

@@ -1,32 +1,105 @@
-.display-none {
-    display: none;
-}
-
-.display-flex {
-    display: flex;
-}
-
-html, body {
+* {
     padding: 0;
     margin: 0;
+}
+html, body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: auto;
+    background: url('images/noise-background.png') rgb(248, 235, 219);
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: .05rem;
+    color: rgb(2, 3, 0);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sida-ett > p:last-child {
-    background: red;
+.welcome-page {
+    width: 100vw;
+    padding: 1.5rem 0;
+
+    background-color: rgb(238, 226, 223);
+
+    font-weight: 500;
+    letter-spacing: .1rem;
+    color: rgb(166, 52, 70);
+    text-align: center;
 }
 
-h1 {
-    background: paleturquoise;
-    padding: 1rem;
+main {
+    width: 25rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+    background-color: rgb(238, 226, 223);
 }
-.allting {
-    width: 28rem;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: palevioletred;
-}
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    h2 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    h3 {
+        margin-top: 1rem;
+        font-size: .8rem;
+    }
+
+    p {
+        padding: .2rem;
+        height: fit-content;
+    }
+
+    label {
+        font-weight: 500;
+    }
+
+    input[type='submit'] {
+        height: 1.2rem;
+        width: 1.2rem;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        color: rgb(238, 226, 223);
+        font-weight: 800;
+        
+        border: none;
+        background-color: rgb(166, 52, 70);
+        border-radius: 50% 50% 50% 50%;
+
+        text-align: center;
+        vertical-align: center;
+
+        cursor: pointer;
+        transition: 500ms ease all;
+    }
+
+        input[type='submit']:hover {
+            background: rgb(226, 64, 88);
+        }
+
+    #restart {
+        width: fit-content;
+        height: 2rem;
+
+        font-family: 'Work Sans', sans-serif;
+        color: rgb(166, 52, 70);
+        border-radius: 0;
+        border-bottom: .1rem solid rgb(166, 52, 70);
+        background: none;
+    }
+
+        #restart:hover {
+            color: rgb(255, 10, 47);
+            border-bottom: .4rem solid rgb(255, 10, 47);
+        }
