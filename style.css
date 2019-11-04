@@ -1,12 +1,14 @@
+/* Universal margin & padding */
 * {
     padding: 0;
     margin: 0;
 }
+
 html, body {
     width: 100vw;
     min-height: 100vh;
     overflow: auto;
-    background: url('images/noise-background.png') rgb(248, 235, 219);
+    background: url('./images/noise-background.png') rgb(248, 235, 219);
 
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
@@ -45,19 +47,29 @@ main {
     }
 
     h2 {
-        margin-top: 1rem;
         font-size: 1rem;
+        margin-top: 1rem;
         line-height: 1rem;
     }
 
     h3 {
-        margin-top: 1rem;
         font-size: .8rem;
+        margin-top: 1rem;
     }
 
     p {
         padding: .2rem;
         height: fit-content;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+    form div {
+        padding: .2rem;
     }
 
     label {
@@ -79,6 +91,7 @@ main {
 
         text-align: center;
         vertical-align: center;
+        justify-self: center;
 
         cursor: pointer;
         transition: 500ms ease all;

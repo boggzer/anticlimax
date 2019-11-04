@@ -3,7 +3,7 @@ let formTwo = document.getElementsByClassName('form-two');
 let formThree = document.getElementsByClassName('form-three');
 
 /**
- * @argument {object} submitBtn all input elements of type 'submit', in a NodeList
+ * @param {(JQuery|HTMLInputElement|Object)} submitBtn all input elements of type 'submit', in a HTMLCollection list
  */
 let submitBtn = $('input[type="submit"]');
 
@@ -13,7 +13,7 @@ let submitBtn = $('input[type="submit"]');
 let userChoice = "";
 
 /**
- * @argument {boolean} checked false to make function begin
+ * @argument {boolean} checked declaration of 
  */
 let checked = false;
 
@@ -48,16 +48,20 @@ submitBtn.click(function () {
 
 
 /**
- * @class
+ * @function radioValidation
  */
 function radioValidation() {
 
-    let radioChoices = $("input[name='choice']");
     /**
-     * Loop
+     * @param {(JQuery|HTMLInputElement|Object)} radioChoices all radio choices as object
+     */
+    let radioChoices = $("input[name='choice']");
+
+    /**
      * @function for 
-     * @param {number} i
-     }
+     * @param {(function|number)} i index
+     * @param {(function|object)} radioChoices.length
+     * @returns {boolean} checked true
      */
     for (let i = 0; i < radioChoices.length; i++) {
         if (radioChoices[i].checked) {
@@ -67,19 +71,37 @@ function radioValidation() {
     };
 
     /**
-     * 
+     * Not checked
+     * @method if
+     * @argument {boolean} checked property
+     * @returns {boolean} false
      */
     if (!checked) {
+        /**
+         * @function {message}
+         * @argument {string} 
+         * @returns {boolean} false
+         * 
+         */
         alert('Välj för att gå vidare');
         return false;
     }
 
+    /**
+     * @method if
+     * @argument {string} userChoice value of radio input equals user's choice
+     */
     if (userChoice === "You peek behind the door to the kitchen.") {
         /**
-         * @argument {}
+         * @param {(JQuery|HTMLCollection)} underThis where new text will be placed beneath
          */
         let underThis = $('p.path-one');
         youChose(userChoice, underThis);
+        /**
+         * @function fadeIn
+         * @argument {(JQuery|HTMLCollection)} {{$('.path-one-death')}}
+         * @this {(JQuery|HTMLCollection)}
+         */
         $('.path-one-death').delay(300).fadeIn('slow', function () {
             $(this).removeClass('display-none');
         })
@@ -138,16 +160,11 @@ function radioValidation() {
     }
 }
 /**
- * 
- * @param {*} theChoice 
- * @param {*} oldText 
- */
-
-/**
  * Retrieves and adds user's choice beneath previous question
+ * @function youChose
  * @param {string} theChoice the string content of the user's checked radio button
- * @param {object} oldText the previous text which is always the previous path question, as a HTMLCollection/NodeList/Object
- * @returns {boolean} false, for no redirecting
+ * @param {HTMLCollection} oldText the previous text which is always the previous path question, as a HTMLCollection/NodeList/Object
+ * @returns {null} change theChoice value to null
  */
 function youChose(theChoice, oldText) {
     let newText = document.createElement('p');
@@ -159,6 +176,11 @@ function youChose(theChoice, oldText) {
     return theChoice = null;
 }
 
+/**
+ * @function restart
+ * @param {(HTMLCollection|Object)} <input
+ * @returns {null}
+ */
 function restart() {
     $('.restart').delay(300).fadeIn('slow', function () {
         $(this).removeClass('display-none');
