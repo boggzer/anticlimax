@@ -1,10 +1,7 @@
-# Laboration 1
-Uppgiften är att tolka fritt och skapa en s.k. "textbaserad interaktiv upplevelse där användaren kan göra förändringar i en värld".
+# Anti-Climax - the MCG
+This is Anti-Climax - a short and silly MCG (Multiple-Choice Game) where the user is presented two choices, and can either choose the right answer and proceed... or die.
 
-## Beskrivning
-Detta är Anti-Climax, ett kort MCG (Multiple-Choice Game) där användaren är med och väljer. Ett vägval presenteras, användaren gör sitt val och går vidare eller... dör. Vid varje misslyckat försök måste användaren börja om från början. Vid slutet kan användaren återigen köra igen, om denne vill.
+Story inspired and generated with [InferKit demo](https://app.inferkit.com/demo) (previously talktotransformer.com).
 
-### Repo
-https://github.com/boggzer/lab1.git
 ### Demo
 https://boggzer.github.io/lab1/
