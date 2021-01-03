@@ -3,5 +3,7 @@ This is Anti-Climax - a short and silly MCG (Multiple-Choice Game) where the use
 
 Story inspired and generated with [InferKit demo](https://app.inferkit.com/demo) (previously talktotransformer.com).
 
+Made with vanilla JS and HTML/CSS.
+
 ### Demo
 https://boggzer.github.io/lab1/
